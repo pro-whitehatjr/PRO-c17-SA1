@@ -1,13 +1,12 @@
 class Box
   {
-    constructor(x,y,w,h,vx,vy)
+    constructor(x,y,w,h,vx)
     {
       this.x =x;
       this.y =y;
       this.w =w;
       this.h = h;
       this.vx = vx;
-      this.vy = vy;
     }
     
     show()
@@ -18,7 +17,6 @@ class Box
       move()
     {
       this.x = this.x+this.vx;
-      this.y = this.y+this.vy;
     }
     
     bounce()
@@ -27,10 +25,6 @@ class Box
         {
           this.vx = -this.vx;
         }
-      if (this.y>=height || this.y<=0)
-       {
-         this.vy = -this.vy;
-       }
     }
   }
 
